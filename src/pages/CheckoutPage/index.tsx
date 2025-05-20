@@ -36,7 +36,7 @@ const CheckoutPage = () => {
 
   if (cart.length === 0) {
     return (
-      <div className="bg-gray-100 min-h-screen">
+      <div className="bg-white min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
           <Title className="!text-3xl sm:!text-4xl font-extrabold text-gray-900 mb-8">
             Checkout

@@ -27,7 +27,7 @@ const OrderSummaryPage = () => {
   const grandTotal = total + shippingCost;
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-white p-4">
       <div className="max-w-6xl mx-auto">
         <Title className="!text-2xl font-semibold mb-6">Order Summary</Title>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
