@@ -18,7 +18,7 @@ const LandingPage = () => {
         </Title>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {tenants.map((tenant) => (
-            <TenantCard key={tenant.slug} tenant={tenant} />
+            <TenantCard key={tenant.id} tenant={tenant} />
           ))}
         </div>
       </div>

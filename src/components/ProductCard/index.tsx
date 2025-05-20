@@ -4,8 +4,7 @@ import { Card, Button } from "antd";
 import { useCartStore } from "../../stores/useCartStore";
 
 interface ProductCardProps {
-  product: Product;
-  tenantSlug: string;
+  product: Product;  
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {

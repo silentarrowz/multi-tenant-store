@@ -111,8 +111,7 @@ const StorefrontPage = () => {
             {filteredProducts.map((product) => (
               <ProductCard
                 key={product.id}
-                product={product}
-                tenantSlug={selectedTenant.slug}
+                product={product}                
               />
             ))}
           </div>
