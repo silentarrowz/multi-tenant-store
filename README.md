@@ -12,9 +12,13 @@ just used a normal input field for the card number too.
 A better way would have been to use react-stripe components with this
 and to have the csv and the expiry date of the card but since the checkout form was supposed to be very basic, I didnt want to complicate it and I would have to spend more time too on using the react stripe elements and setting up things for it.
 
-Actually, I had started off with using context api but it was becoming too cumbersome and the data also wasn't persisting.
+Actually, I had started off with using context api but it was becoming too cumbersome 
+and the data also wasn't persisting.
 Then I decided to use Zustand as it allows persisting data and is a lot 
-like redux which made it easy to use too.
+like redux which made it easy to use too 
+and actually I also wanted an opportunity to use zustand.
+
+
 
 
 
