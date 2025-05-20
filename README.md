@@ -1,3 +1,35 @@
+Include a README.md with:
+* Design decisions
+* Trade-offs and assumptions
+* Known issues or incomplete features
+
+I have used antd with tailwind as I have a lot of experience with both of these and antd had the components I wanted here.
+Basically, I have used different cards for the tenants and the products
+and clicking on the cards take the person to the next page
+
+I have just used normal form for the checkout and 
+just used a normal input field for the card number too.
+A better way would have been to use react-stripe components with this
+and to have the csv and the expiry date of the card but since the checkout form was supposed to be very basic, I didnt want to complicate it and I would have to spend more time too on using the react stripe elements and setting up things for it.
+
+Actually, I had started off with using context api but it was becoming too cumbersome and the data also wasn't persisting.
+Then I decided to use Zustand as it allows persisting data and is a lot 
+like redux which made it easy to use too.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
