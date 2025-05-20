@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Form, Input, Button, Typography, message, Spin } from "antd";
+import { Form, Input, Button, Typography, message, Spin, Row, Col } from "antd";
 import { useCartStore } from "../../stores/useCartStore";
 
 const { Title } = Typography;
@@ -61,7 +61,12 @@ const CheckoutPage = () => {
           {/* Checkout Form */}
           <div className="md:col-span-2 bg-white rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-semibold mb-4">Checkout</h2>
-            <Form form={form} layout="vertical" onFinish={onFinish} className="space-y-4">
+            <Form
+              form={form}
+              layout="vertical"
+              onFinish={onFinish}
+              className="space-y-4"
+            >
               <Form.Item
                 label="Full Name"
                 name="fullName"
@@ -113,6 +118,57 @@ const CheckoutPage = () => {
               >
                 <Input placeholder="1234 5678 9012 3456" />
               </Form.Item>
+
+              {/* CVV and Expiry Date in the same row */}
+              <Row gutter={16}>
+                <Col span={12}>
+                  <Form.Item
+                    name="cvv"
+                    label="CVV"
+                    rules={[
+                      { required: true, message: "Please enter the CVV" },
+                      {
+                        pattern: /^\d{3,4}$/,
+                        message: "CVV must be 3 or 4 digits",
+                      },
+                    ]}
+                  >
+                    <Input placeholder="123" maxLength={4} />
+                  </Form.Item>
+                </Col>
+                <Col span={12}>
+                  <Form.Item
+                    name="expiryDate"
+                    label="Expiry Date"
+                    rules={[
+                      {
+                        required: true,
+                        message: "Please enter the expiry date",
+                      },
+                      {
+                        pattern: /^(0[1-9]|1[0-2])\/\d{2}$/,
+                        message: "Expiry date must be in MM/YY format",
+                      },
+                      {
+                        validator(_, value) {
+                          if (!value) return Promise.resolve();
+                          const [month, year] = value.split("/").map(Number);
+                          const expiry = new Date(2000 + year, month - 1);
+                          const today = new Date();
+                          if (expiry < today) {
+                            return Promise.reject(
+                              new Error("Card has expired")
+                            );
+                          }
+                          return Promise.resolve();
+                        },
+                      },
+                    ]}
+                  >
+                    <Input placeholder="MM/YY" maxLength={5} />
+                  </Form.Item>
+                </Col>
+              </Row>
 
               <Form.Item>
                 <button
