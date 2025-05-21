@@ -18,6 +18,9 @@ Then I decided to use Zustand as it allows persisting data and is a lot
 like redux which made it easy to use too 
 and actually I also wanted an opportunity to use zustand.
 
+Just found an issue where it shows previously selected items from previous store-
+this can be fixed by changing the id's as I am starting id's of products in each store from 1,2,3 and so since it's checking by id, it keeps showing items from different store as selected too. fixing it by changing the id's keeping them unique. this wont actually happen if it's actually coming from backend. this was mock data and so can cause this.
+
 
 
 

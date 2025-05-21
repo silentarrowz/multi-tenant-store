@@ -71,7 +71,7 @@
       "slug": "digital-media-store",
       "products": [
         {
-          "id": 1,
+          "id": 8,
           "title": "E-Book: Mystery Novel",
           "price": 9.99,
           "description": "A thrilling mystery novel in digital format.",
@@ -79,7 +79,7 @@
           "image": "https://placehold.co/200x200?text=Mystery+Novel"
         },
         {
-          "id": 2,
+          "id": 9,
           "title": "Music Album Download",
           "price": 14.99,
           "description": "Download the latest album by your favorite artist.",
@@ -87,7 +87,7 @@
           "image": "https://placehold.co/200x200?text=Music+Album"
         },
         {
-          "id": 3,
+          "id": 10,
           "title": "Audiobook Subscription",
           "price": 19.99,
           "description": "Access thousands of audiobooks with a monthly plan.",
@@ -95,7 +95,7 @@
           "image": "https://placehold.co/200x200?text=Audiobook+Sub"
         },
         {
-          "id": 4,
+          "id": 11,
           "title": "Digital Art Pack",
           "price": 24.99,
           "description": "A collection of high-quality digital artwork.",
@@ -103,7 +103,7 @@
           "image": "https://placehold.co/200x200?text=Digital+Art+Pack"
         },
         {
-          "id": 5,
+          "id": 12,
           "title": "Movie Streaming Pass",
           "price": 12.99,
           "description": "Stream movies for a month with this pass.",
@@ -111,7 +111,7 @@
           "image": "https://placehold.co/200x200?text=Movie+Streaming"
         },
         {
-          "id": 6,
+          "id": 13,
           "title": "Podcast Premium Access",
           "price": 7.99,
           "description": "Unlock exclusive episodes with this premium access.",
@@ -119,7 +119,7 @@
           "image": "https://placehold.co/200x200?text=Podcast+Premium"
         },
         {
-          "id": 7,
+          "id": 14,
           "title": "Stock Photo Bundle",
           "price": 29.99,
           "description": "Download a bundle of royalty-free stock photos.",
@@ -135,7 +135,7 @@
       "slug": "online-learning-hub",
       "products": [
         {
-          "id": 1,
+          "id": 15,
           "title": "Web Development Course",
           "price": 99.99,
           "description": "Learn web development with this comprehensive course.",
@@ -143,7 +143,7 @@
           "image": "https://placehold.co/200x200?text=Web+Dev+Course"
         },
         {
-          "id": 2,
+          "id": 16,
           "title": "Game License: Space Quest",
           "price": 49.99,
           "description": "Get a digital license for the Space Quest game.",
@@ -151,7 +151,7 @@
           "image": "https://placehold.co/200x200?text=Space+Quest"
         },
         {
-          "id": 3,
+          "id": 17,
           "title": "Data Science Webinar",
           "price": 79.99,
           "description": "Join an expert-led webinar on data science.",
@@ -159,7 +159,7 @@
           "image": "https://placehold.co/200x200?text=Data+Science+Webinar"
         },
         {
-          "id": 4,
+          "id": 18,
           "title": "Virtual Event Ticket",
           "price": 39.99,
           "description": "Access a live virtual tech conference.",
@@ -167,7 +167,7 @@
           "image": "https://placehold.co/200x200?text=Virtual+Event+Ticket"
         },
         {
-          "id": 5,
+          "id": 19,
           "title": "Language Learning App",
           "price": 29.99,
           "description": "Learn a new language with this app subscription.",
@@ -175,7 +175,7 @@
           "image": "https://placehold.co/200x200?text=Language+App"
         },
         {
-          "id": 6,
+          "id": 20,
           "title": "Digital Marketing Course",
           "price": 89.99,
           "description": "Master digital marketing with this online course.",
@@ -183,7 +183,7 @@
           "image": "https://placehold.co/200x200?text=Digital+Marketing"
         },
         {
-          "id": 7,
+          "id": 21,
           "title": "Fitness App Subscription",
           "price": 19.99,
           "description": "Track your fitness goals with this app subscription.",
