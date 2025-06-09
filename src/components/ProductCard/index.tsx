@@ -60,8 +60,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <div>
             <p className="text-gray-600">${product.price.toFixed(2)}</p>
             <p className="text-sm text-gray-500 line-clamp-2">
-              {product.description}
+              {product.description} 
             </p>
+            <p>Category: {product.category}</p>
           </div>
         }
       />
