@@ -14,7 +14,7 @@ const StorefrontPage = () => {
   const { selectedTenant, isLoading, error } = useTenantStore();
   const { cart } = useCartStore();
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortPrice, setSortPrice] = useState<"low-to-high" | "high-to-low" | null>(null);
+  const [sortPrice, setSortPrice] = useState<"low-to-high" | "high-to-low"|"a-to-z"|"z-to-a" | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   // Log cart value on render and when cart changes
@@ -55,7 +55,21 @@ const StorefrontPage = () => {
     filteredProducts = [...filteredProducts].sort((a, b) => {
       if (sortPrice === "low-to-high") {
         return a.price - b.price;
-      } else {
+      }else if(sortPrice === 'a-to-z'){
+        if(a.title < b.title){
+          return -1;
+        }else {
+          return 1;
+        }
+      }else if(sortPrice === 'z-to-a'){
+        if(a.title< b.title){
+          return 1;
+        }else{
+          return -1
+        }
+      }
+      
+      else {
         return b.price - a.price;
       }
     });
@@ -85,6 +99,8 @@ const StorefrontPage = () => {
             >
               <Option value="low-to-high">Price: Low to High</Option>
               <Option value="high-to-low">Price: High to Low</Option>
+               <Option value="a-to-z">Name: A to Z</Option>
+               <Option value="z-to-a">Name: Z to A</Option>
             </Select>
           </div>
           <div className="w-full sm:w-1/4">
