@@ -14,7 +14,7 @@ const StorefrontPage = () => {
   const { selectedTenant, isLoading, error } = useTenantStore();
   const { cart } = useCartStore();
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortPrice, setSortPrice] = useState<"low-to-high" | "high-to-low"|"a-to-z"|"z-to-a" | null>(null);
+  const [sorting, setSorting] = useState<"low-to-high" | "high-to-low"|"a-to-z"|"z-to-a" | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   // Log cart value on render and when cart changes
@@ -51,17 +51,17 @@ const StorefrontPage = () => {
   }
   console.log('filteredProducts : ', filteredProducts);
   // Sort products by price if a sort option is selected
-  if (sortPrice) {
+  if (sorting) {
     filteredProducts = [...filteredProducts].sort((a, b) => {
-      if (sortPrice === "low-to-high") {
+      if (sorting === "low-to-high") {
         return a.price - b.price;
-      }else if(sortPrice === 'a-to-z'){
+      }else if(sorting === 'a-to-z'){
         if(a.title < b.title){
           return -1;
         }else {
           return 1;
         }
-      }else if(sortPrice === 'z-to-a'){
+      }else if(sorting === 'z-to-a'){
         if(a.title< b.title){
           return 1;
         }else{
@@ -94,7 +94,7 @@ const StorefrontPage = () => {
             <Select
               placeholder="Sort by Price"
               allowClear
-              onChange={(value: "low-to-high" | "high-to-low" | undefined) => setSortPrice(value || null)}
+              onChange={(value: "low-to-high" | "high-to-low" | undefined) => setSorting(value || null)}
               className="w-full"
             >
               <Option value="low-to-high">Price: Low to High</Option>
