@@ -9,12 +9,14 @@ const { Title } = Typography;
 const { Search } = Input;
 const { Option } = Select;
 
+type SortOption = "low-to-high" | "high-to-low" | "a-to-z" | "z-to-a";
+
 const StorefrontPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const { selectedTenant, isLoading, error } = useTenantStore();
   const { cart } = useCartStore();
   const [searchQuery, setSearchQuery] = useState("");
-  const [sorting, setSorting] = useState<"low-to-high" | "high-to-low"|"a-to-z"|"z-to-a" | null>(null);
+  const [sorting, setSorting] = useState<SortOption | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   // Log cart value on render and when cart changes
@@ -94,7 +96,7 @@ const StorefrontPage = () => {
             <Select
               placeholder="Sort by Price"
               allowClear
-              onChange={(value: "low-to-high" | "high-to-low" | undefined) => setSorting(value || null)}
+              onChange={(value: SortOption | undefined) => setSorting(value || null)}
               className="w-full"
             >
               <Option value="low-to-high">Price: Low to High</Option>
